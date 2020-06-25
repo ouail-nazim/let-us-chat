@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Chat</title>
+    <title>Let Us Chat</title>
     <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon"/>
     
     <!-- bootstraplinks -->
@@ -15,6 +15,25 @@
 </head>
 <body>
     <div class="all">
+        <nav>
+            <button onclick="document.querySelector('.new-name').classList.toggle('d-none');"
+        class="btn "
+    >update name</button>
+    <!-- name up date  -->
+    <form class="new-name d-none my-3">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text"> Update name: </div>
+            </div>
+            <input type="text" autocomplete="off" id="name" class="form-control" required>
+            <div class="input-group-append">
+                <input type="submit" value="update" class="btn">   
+            </div>
+            
+        </div>
+        <div class="update-mesg mt-1 text-center text-muted d-none"></div>
+    </form>
+        </nav>
     <!-- container and title -->
     <div class="container my-4">
         <h1 class="text-center my-4"><span id="nameuser" class="mr-2"></span>chat Room </h1>
@@ -47,20 +66,7 @@
             </div>
         </div>
     </form>
-    <!-- name up date  -->
-    <form class="new-name my-3">
-        <div class="input-group">
-            <div class="input-group-prepend">
-                <div class="input-group-text"> Update name: </div>
-            </div>
-            <input type="text" autocomplete="off" id="name" class="form-control" required>
-            <div class="input-group-append">
-                <input type="submit" value="update" class="btn">   
-            </div>
-            
-        </div>
-        <div class="update-mesg mt-1 text-center text-muted d-none"></div>
-    </form>
+    
 
 
 </div>
