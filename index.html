@@ -13,23 +13,34 @@
     <link rel="stylesheet" href="style/main.css">
 </head>
 <body>
+
+   <!-- container and title -->
+    <nav class="navbar navbar-dark bg-dark">
+        
+        <div>
+            <img src="images/icon.ico" width="40px" class="">
+            <a class="navbar-brand">Let us chat </a>
+        </div>
+        <div class="chat-rooms my-2 text-center">
+            <button class="btn" id="public">#public</button>
+            <button class="btn" id="education">#education</button>
+            <button class="btn" id="music">#music</button>
+            <button class="btn" id="cinema">#cinema</button>
+    
+        </div>
+        <div>
+            
+            <span id="nameuser" class="mr-2"></span>
+            <button id="open" class="btn"><i class="fa fa-cogs"></i></button>
+            
+        </div>
+        
+      </nav>
+      
     <div class="all">
-            <!-- container and title -->
-    <div class="container my-4">
-        <h1 class="text-center my-4"><span id="nameuser" class="mr-2"></span>chat Room </h1>
-
-    </div>
-    <!-- button dor chatrooms -->
-    <div class="chat-rooms mb-3 text-center">
-        <div class="my-2">Choose a theme of chat</div>
-        <button class="btn" id="public">#public</button>
-        <button class="btn" id="education">#education</button>
-        <button class="btn" id="music">#music</button>
-        <button class="btn" id="cinema">#cinema</button>
-
-    </div>
+        <div class="update-mesg mt-1 text-center text-muted d-none"></div>
     <!-- chat list/ msg display -->
-    <div class="chat-window">
+    <div class="chat-window mt-2">
         <ul class="chat-list list-group">
                 
         </ul>
@@ -46,9 +57,7 @@
             </div>
         </div>
     </form>
-    <button onclick="document.querySelector('.new-name').classList.toggle('d-none');"
-    class="btn "
->update name</button>
+    
 <!-- name up date  -->
 <form class="new-name d-none my-3">
     <div class="input-group">
@@ -57,11 +66,11 @@
         </div>
         <input type="text" autocomplete="off" id="name" class="form-control" required>
         <div class="input-group-append">
-            <input type="submit" value="update" class="btn">   
+            <input type="submit" value="update" class="btn"> 
+            <button id="close" class="btn cc d-none"><i class="fa fa-times"></i>cancel</button> 
         </div>
         
     </div>
-    <div class="update-mesg mt-1 text-center text-muted d-none"></div>
 </form>
     
 

@@ -5,6 +5,8 @@ const newname=document.querySelector('.new-name');
 const updatemessage=document.querySelector('.update-mesg');
 const nameuser=document.getElementById('nameuser');
 const chatroom=document.querySelector('.chat-rooms');
+const open=document.getElementById('open');
+const close=document.getElementById('close');
 //check localstorage
 const username=localStorage.username? localStorage.username : 'some one';
 nameuser.textContent=username;
@@ -26,6 +28,16 @@ newchat.addEventListener('submit',e=>{
         .catch(err=>{console.log('chat not added'+err)});
 });
 //update the name of user
+open.addEventListener('click',()=>{
+    newname.classList.remove('d-none');
+    close.classList.remove('d-none');
+    open.classList.add('d-none');
+});
+close.addEventListener('click',()=>{
+    newname.classList.add('d-none');
+    close.classList.add('d-none');
+    open.classList.remove('d-none');
+});
 newname.addEventListener('submit',e=>{
     e.preventDefault();
     let name=newname.name.value.trim();
@@ -37,6 +49,8 @@ newname.addEventListener('submit',e=>{
     setInterval(() => {
         updatemessage.classList.add('d-none');
     }, 2000);
+    newname.classList.add('d-none');
+    open.classList.remove('d-none');
 });
 
 chatroom.addEventListener('click',e=>{

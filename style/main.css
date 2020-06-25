@@ -12,6 +12,12 @@
     outline: none !important;
     box-shadow:none !important;
 }
+.cc{
+    background: rgb(217, 67, 67);
+    color: white;
+    outline: none !important;
+    box-shadow:none !important;
+}
 .btn:focus{
     outline: none !important;
 }
@@ -25,4 +31,8 @@
 .chat-window{
     height: 350px;
     overflow: auto;
+}
+#nameuser{
+    color: white;
+    font-weight: bolder;
 }
